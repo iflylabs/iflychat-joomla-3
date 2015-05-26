@@ -212,6 +212,7 @@ function iflychat_get_user_pic_url() {
     }
 }
 
+
 function iflychat_get_user_profile_url() {
     if(file_exists(JPATH_ROOT .'/components/com_community/libraries/core.php')) {
 
