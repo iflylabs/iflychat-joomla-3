@@ -4,7 +4,7 @@
     <author>iFlyChat Package Team</author>
     <creationDate>March 2014</creationDate>
     <packagename>iflychat</packagename>
-    <version>1.0.9</version>
+    <version>2.0.3</version>
     <url>http://www.iflylabs.com/</url>
     <packager>iFlyChat Package Team</packager>
     <packagerurl>http://www.iflylabs.com/</packagerurl>
@@ -15,6 +15,7 @@
     <files folder="packages">
         <file type="component" id="iflychat" >com_iflychat.zip</file>
         <file type="module" id="iflychat" client="site">mod_iflychat.zip</file>
+        <file type="plugin" id="iflychat" group="user">plg_iflychat.zip</file>
     </files>
     <updateservers>
         <server type="extension" priority="1" name="iFlyChat 3.3.0 Update Site">https://iflychat.com/downloads/joomla-3/iflychat_update.xml</server>

@@ -19,11 +19,4 @@ class IflychatController extends JControllerLegacy
         JRequest::setVar('view', 'auth');
         parent::display();
     }
-    public function mobileAuth() {
-
-        // Set view
-        JRequest::setVar('view', 'mobileauth');
-        parent::display();
-
-    }
 }
