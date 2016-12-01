@@ -10,11 +10,7 @@
 
 defined('_JEXEC') or die;
 $componentParams = JComponentHelper::getParams('com_iflychat');
-$variable_get= $componentParams->get('iflychat_ext_d_i', '3');
-define('IFLYCHAT_EXTERNAL_HOST', 'http://api'.$variable_get.'.iflychat.com');
-define('IFLYCHAT_EXTERNAL_PORT', '80');
-define('IFLYCHAT_EXTERNAL_A_HOST', 'https://api'.$variable_get.'.iflychat.com');
-define('IFLYCHAT_EXTERNAL_A_PORT', '443');
+
 class IflychatControllerIflychat extends JControllerLegacy {
 
 
@@ -55,37 +51,35 @@ class IflychatControllerIflychat extends JControllerLegacy {
         }
 
         //post request
-        $pdata = array(
-            'api_key' => $data['iflychat_external_api_key'],
-            'enable_chatroom' => $data['iflychat_enable_chatroom'],
-            'theme' => ($data['iflychat_theme'] == 1)?'light':'dark',
-            'notify_sound' => $data['iflychat_notification_sound'],
-            'smileys' => $data['iflychat_enable_smileys'],
-            'log_chat' => $data['iflychat_log_messages'],
-            'chat_topbar_color' => $data['iflychat_chat_topbar_color'],
-            'chat_topbar_text_color' => $data['iflychat_chat_topbar_text_color'],
-            'font_color' => $data['iflychat_font_color'],
-            'chat_list_header' => $data['iflychat_chat_list_header'],
-            'public_chatroom_header' => $data['iflychat_public_chatroom_header'],
-            'rel' => $data['iflychat_rel'],
-            'version' => 'Joomla-3.3-1.0.0',
-            'show_admin_list' => $data['iflychat_show_admin_list'],
-            'clear' => $data['iflychat_allow_single_message_delete'],
-            'delmessage' => $data['iflychat_allow_clear_room_history'],
-            'ufc' => $data['iflychat_allow_user_font_color'],
-            'guest_prefix' => ($data['iflychat_anon_prefix'] . " "),
-            'enable_guest_change_name' => $data['iflychat_anon_change_name'],
-            'use_stop_word_list' => $data['iflychat_use_stop_word_list'],
-            'stop_word_list' => $data['iflychat_stop_word_list'],
-            'file_attachment' => ($data['iflychat_enable_file_attachment'] == "1")?'1':'2',
-            'mobile_browser_app' => ($data['iflychat_enable_mobile_browser_app'] == "1")?'1':'2'
-
-        );
-        
-        
-        jimport('joomla.http');
-        $http = JHttpFactory::getHttp();
-        $response = $http->post(IFLYCHAT_EXTERNAL_A_HOST . ':' . IFLYCHAT_EXTERNAL_A_PORT .  '/z/', $pdata);
+//        $pdata = array(
+//            'api_key' => $data['iflychat_external_api_key'],
+//            'enable_chatroom' => $data['iflychat_enable_chatroom'],
+//            'theme' => ($data['iflychat_theme'] == 1)?'light':'dark',
+//            'notify_sound' => $data['iflychat_notification_sound'],
+//            'smileys' => $data['iflychat_enable_smileys'],
+//            'log_chat' => $data['iflychat_log_messages'],
+//            'chat_topbar_color' => $data['iflychat_chat_topbar_color'],
+//            'chat_topbar_text_color' => $data['iflychat_chat_topbar_text_color'],
+//            'font_color' => $data['iflychat_font_color'],
+//            'chat_list_header' => $data['iflychat_chat_list_header'],
+//            'public_chatroom_header' => $data['iflychat_public_chatroom_header'],
+//            'rel' => $data['iflychat_rel'],
+//            'version' => 'Joomla-3.3-1.0.0',
+//            'show_admin_list' => $data['iflychat_show_admin_list'],
+//            'clear' => $data['iflychat_allow_single_message_delete'],
+//            'delmessage' => $data['iflychat_allow_clear_room_history'],
+//            'ufc' => $data['iflychat_allow_user_font_color'],
+//            'guest_prefix' => ($data['iflychat_anon_prefix'] . " "),
+//            'enable_guest_change_name' => $data['iflychat_anon_change_name'],
+//            'use_stop_word_list' => $data['iflychat_use_stop_word_list'],
+//            'stop_word_list' => $data['iflychat_stop_word_list'],
+//            'file_attachment' => ($data['iflychat_enable_file_attachment'] == "1")?'1':'2',
+//            'mobile_browser_app' => ($data['iflychat_enable_mobile_browser_app'] == "1")?'1':'2'
+//
+//        );
+//        jimport('joomla.http');
+//        $http = JHttpFactory::getHttp();
+//        $response = $http->post(IFLYCHAT_EXTERNAL_A_HOST . ':' . IFLYCHAT_EXTERNAL_A_PORT .  '/z/', $pdata);
 
 
 

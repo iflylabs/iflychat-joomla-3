@@ -11,11 +11,6 @@ if(!defined('DS')){
 }
 defined('_JEXEC') or die('Direct Access to this location is not allowed.');
 //Add helper file
-require_once dirname(__FILE__).DS.'helper.php';
-
-
-$obj = new modIflychatHelper();
-$items = $obj->get_html_code();
-
+//require_once dirname(__FILE__).DS.'helper.php';
 
 require(JModuleHelper::getLayoutPath('mod_iflychat'));
